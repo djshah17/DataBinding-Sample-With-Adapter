@@ -3,7 +3,7 @@ A simple example to use databinding in activity and adapter using kotlin.
 
 
 ## Enabling DataBinding in build.gradle under app module
-```
+```gradle
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -18,7 +18,7 @@ dependencies {
 ```
 
 ## Binding layout with data
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -35,7 +35,7 @@ dependencies {
 ```
 
 ## Make changes in adapter
-```
+```kotlin
 class PlayerAdapter(private val context: Context, private val list: MutableList<Player>?) : RecyclerView.Adapter<PlayerAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
